@@ -6,6 +6,32 @@ A modern, high-performance, 64-bit operating system built from scratch in C and 
 [![Architecture](https://img.shields.io/badge/arch-x86__64-blue.svg)](#system-architecture)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](#license)
 
+<p align="center">
+  <img src="docs/screenshots/desktop.png" alt="FirstOS Desktop Environment" width="850">
+</p>
+
+---
+
+## 📸 Visual Tour & Screenshots
+
+### 🌐 Native HTML5 Web Browser
+> Browsing live web applications directly inside FirstOS via the native HTML5 engine and TCP/IP stack.
+
+| YouTube Dynamic Synthesis | Wikipedia Direct Web Rendering |
+|:---:|:---:|
+| ![YouTube](docs/screenshots/browser_youtube.png) | ![Wikipedia](docs/screenshots/browser_wikipedia.png) |
+
+### ⚙️ System Tools & Userspace
+> True Color windowing, terminal telemetry, and process management.
+
+| Terminal (Hardware Telemetry & Memory) | Interactive Task Manager |
+|:---:|:---:|
+| ![Terminal](docs/screenshots/terminal.png) | ![Task Manager](docs/screenshots/task_manager.png) |
+
+| Graphical File Explorer | Spotlight Search Bar |
+|:---:|:---:|
+| ![File Explorer](docs/screenshots/file_explorer.png) | ![Spotlight](docs/screenshots/spotlight.png) |
+
 ---
 
 ## 🌟 Key Features
