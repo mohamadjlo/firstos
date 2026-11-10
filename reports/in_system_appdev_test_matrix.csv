@@ -1,7 +1,0 @@
-Test_ID,Check,Result,Evidence
-APPDEV_01,App Studio init,PASS,"init line in boot log"
-APPDEV_02,Project wizard,PASS,"/Projects/AppT27576"
-APPDEV_03,In-system build,PASS,"/Projects/AppT27576/build/app.elf"
-APPDEV_04,Ring 3 run,PASS,"process_spawn succeeded"
-APPDEV_05,Stop running process,PASS,"explicit STOP of live PID"
-APPDEV_06,Persistence across reboot,PASS,"project re-opened and built from fs.img after reboot"
