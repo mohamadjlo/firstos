@@ -1,0 +1,30 @@
+function ui:
+  add image "/firstOS.ico" at (20, 20)
+  add label "FirstLang OS Features Demo" at (90, 30)
+
+  add radio "Enable Option 1" named "rad1" at (20, 80)
+  add checkbox "Remember Settings" named "chk1" at (20, 110)
+  add slider "Volume Level" named "sld1" at (20, 140)
+  add chart "System Load" named "cht1" at (20, 180)
+
+  add button "Test Memory" named "btnMem" at (260, 80)
+  add label "Mem Status: Ready" named "lblMem" at (390, 85)
+
+  add button "Test File I/O" named "btnFile" at (260, 120)
+  add label "File Status: Ready" named "lblFile" at (390, 125)
+
+  whenever click "btnMem":
+    allocate memory 1024 to ptr
+    write memory 42 to ptr
+    read memory at ptr to val
+    set lblMem to "Allocated & Read: " + val
+    free memory ptr
+  end
+
+  whenever click "btnFile":
+    set testData to "Hello FirstOS!"
+    write file testData to "/test.txt"
+    read file "/test.txt" to readData
+    set lblFile to "File Read: " + readData
+  end
+end

@@ -1,0 +1,52 @@
+#ifndef COMPOSITOR_H
+#define COMPOSITOR_H
+
+#include "framebuffer.h"
+
+typedef unsigned int u32;
+
+typedef struct {
+    int x;
+    int y;
+    int w;
+    int h;
+} comp_rect_t;
+
+typedef struct {
+    int id;
+    int x;
+    int y;
+    int w;
+    int h;
+    u32 color;
+    int visible;
+} comp_surface_t;
+
+void compositor_init(int screen_w, int screen_h);
+int compositor_enabled(void);
+int compositor_create_surface(int x, int y, int w, int h, u32 color);
+void compositor_move_surface(int id, int x, int y);
+void compositor_damage(int x, int y, int w, int h);
+int compositor_damage_count(void);
+const comp_rect_t *compositor_damage_at(int index);
+void compositor_reset_damage(void);
+int compositor_surface_count(void);
+const comp_surface_t *compositor_surface_at(int index);
+
+typedef struct {
+    u32 frame_count;
+    u32 full_repaints;
+    u32 partial_repaints;
+    u32 virtio_flushes;
+    u32 last_damage_w;
+    u32 last_damage_h;
+} compositor_stats_t;
+
+void compositor_record_present(int is_full, u32 w, u32 h);
+const compositor_stats_t *compositor_get_stats(void);
+void compositor_log_stats(void);
+
+// New additions
+void fb_blend_rect_simd(int x, int y, int w, int h, u32 color, unsigned char alpha);
+
+#endif

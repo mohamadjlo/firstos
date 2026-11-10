@@ -1,0 +1,8 @@
+# FirstOS Desktop Welcome Script
+echo Welcome to FirstOS Terminal Scripting!
+echo Executed via double-click on Desktop.
+uptime
+date
+pwd
+echo Desktop files:
+ls /Desktop

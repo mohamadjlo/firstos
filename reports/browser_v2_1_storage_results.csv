@@ -1,0 +1,13 @@
+test_id,name,status,details
+ST_01,Storage Subsystem Initialization,PASS,Service active in kernel space
+ST_02,Write/Read Same Page,PASS,localStorage.setItem and getItem functional with exact string values
+ST_03,Key Overwrite Behavior,PASS,Writing existing key updates value in-place without duplicate entries
+ST_04,Multiple Keys per Origin,PASS,Handled up to FIRSTOS_MAX_WEB_STORAGE_RECORDS (128 records)
+ST_05,Origin Isolation,PASS,Storage partitions separate records by normalized scheme/host/port
+ST_06,removeItem Semantics,PASS,localStorage.removeItem purges target key; subsequent getItem returns empty/null
+ST_07,clear() Origin Scoping,PASS,localStorage.clear() drops only matching origin keys; other origins preserved
+ST_08,key(index) & length Properties,PASS,storage_key and storage_length accurately reflect active items
+ST_09,Persistence Across Reboot,PASS,Serialized storage records saved to /firstos_browser.dat via VFS and restored on boot
+ST_10,SessionStorage Reset on Reboot,PASS,sessionStorage remains in RAM (g_session_storage) and resets cleanly on reboot
+ST_11,Corruption-Safe Recovery,PASS,CRC-32 checksum validated per record; corrupted records discarded safely
+ST_12,Storage Size Limit Enforcement,PASS,"Defensive cap on record bytes (192 val, 48 key, 96 origin) prevents buffer overruns"

@@ -1,0 +1,22 @@
+class init:
+  function Main:
+    set x to 10
+    set dir to 10
+    set running to 1
+    
+    while running == 1:
+      clear ui
+      add rect at (x, 100) size (60, 60)
+      
+      set x to x + dir
+      
+      if x > 300:
+        set dir to 0 - 10
+      if x < 10:
+        set dir to 10
+        
+      delay 50
+    end
+    print "Game loop finished!"
+  end
+end

@@ -1,0 +1,24 @@
+class init:
+  function Main:
+    clear ui
+    
+    add label "=== Login to FirstOS ===" at (110, 20)
+    
+    add label "Username:" at (60, 80)
+    add text "admin" named "username_input" at (160, 75)
+    
+    add label "Password:" at (60, 130)
+    add text "****" named "password_input" at (160, 125)
+    
+    add button "Login" named "btnLogin" at (160, 180)
+    
+    whenever click "btnLogin":
+        print "Attempting to log in..."
+        # Add login verification logic here
+        delay 500
+        print "Login successful!"
+        clear ui
+        add label "Welcome back!" at (160, 100)
+    end
+  end
+end

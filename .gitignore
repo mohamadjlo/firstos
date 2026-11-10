@@ -1,0 +1,60 @@
+# Binaries and ISO images
+*.bin
+*.iso
+*.img
+*.bundle
+backups/*.bundle
+isodir/
+*.o
+*.a
+*.so
+*.dylib
+
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Debugging and Profiling
+*.dSYM/
+*.log
+*.sock
+*.ppm
+core
+gmon.out
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archives and Large Media
+*.tar.gz
+*.tar.xz
+*.zip
+*.mov
+*.mp4
+
+# Temporary and Scratch Files
+/tmp/
+*~
+*.swp
+*.bak
+*.bak_*
+*.orig
+test_eval
+test_eval_math
+test_fl
+test_hda
+test_parse
+hello.elf
+
+# User/Local Build Artifacts
+userspace/build/
+minibrowser/minibrowser
+minibrowser/**/*.o
+minibrowser/**/*.dSYM
+apps/**/*.o
+apps/**/*.elf
+apps/**/*.bin

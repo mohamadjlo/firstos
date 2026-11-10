@@ -1,0 +1,17 @@
+# FirstOS Terminal Batch Script (.tml)
+echo ================================
+echo    FirstOS Batch Execution
+echo ================================
+uname
+date
+pwd
+echo Listing current directory:
+ls
+echo Creating /tmp_test directory...
+mkdir /tmp_test
+touch /tmp_test/sample.txt
+echo Listing /tmp_test:
+ls /tmp_test
+echo ================================
+echo     Batch Script Completed
+echo ================================

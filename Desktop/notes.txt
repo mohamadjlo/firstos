@@ -1,0 +1,10 @@
+Welcome to FirstOS Desktop!
+
+FirstOS features:
+- File & Directory Drag and Drop
+- Kernel File Copy & Paste
+- Default File Associations:
+  * Image files -> Preview
+  * Text files -> Text Edit
+  * Video files -> Media Player
+  * Audio files -> Media Player
