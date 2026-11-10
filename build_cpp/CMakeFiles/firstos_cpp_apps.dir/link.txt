@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfirstos_cpp_apps.a CMakeFiles/firstos_cpp_apps.dir/explorer/FileExplorer.cpp.o CMakeFiles/firstos_cpp_apps.dir/explorer/FileSignatureParser.cpp.o CMakeFiles/firstos_cpp_apps.dir/media/MediaPlayer.cpp.o CMakeFiles/firstos_cpp_apps.dir/media/ImageDecoder.cpp.o
-/usr/bin/ranlib libfirstos_cpp_apps.a

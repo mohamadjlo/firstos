@@ -1,5 +1,0 @@
-/Users/mohamadjlo/Desktop/FirstOS/build_cpp/CMakeFiles/firstos_cpp_apps.dir
-/Users/mohamadjlo/Desktop/FirstOS/build_cpp/CMakeFiles/test_cpp_apps.dir
-/Users/mohamadjlo/Desktop/FirstOS/build_cpp/CMakeFiles/test.dir
-/Users/mohamadjlo/Desktop/FirstOS/build_cpp/CMakeFiles/edit_cache.dir
-/Users/mohamadjlo/Desktop/FirstOS/build_cpp/CMakeFiles/rebuild_cache.dir

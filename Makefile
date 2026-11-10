@@ -25,7 +25,6 @@ all: check-toolchain external-apps $(ISO)
 
 external-apps:
 	$(MAKE) -C apps/hello
-	$(MAKE) -C baremetal_browser firstos
 
 check-toolchain:
 	@command -v $(CC) >/dev/null 2>&1 || { echo "Missing compiler: $(CC)"; exit 1; }
@@ -484,61 +483,6 @@ html5_media.o: html5_media.c html5_media.h
 
 text_engine.o: text_engine.c text_engine.h io.h framebuffer.h font.h
 	$(CC) $(CFLAGS) -c text_engine.c -o text_engine.o
-
-# Baremetal Browser Subsystem Objects
-bb_libc.o: baremetal_browser/bb_libc.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/bb_libc.c -o bb_libc.o
-
-bb_rasterizer.o: baremetal_browser/bb_rasterizer.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/bb_rasterizer.c -o bb_rasterizer.o
-
-bb_font.o: baremetal_browser/bb_font.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/bb_font.c -o bb_font.o
-
-bb_image.o: baremetal_browser/bb_image.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/bb_image.c -o bb_image.o
-
-bb_dom.o: baremetal_browser/bb_dom.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/bb_dom.c -o bb_dom.o
-
-html_entities.o: baremetal_browser/html_entities.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/html_entities.c -o html_entities.o
-
-html_tokenizer.o: baremetal_browser/html_tokenizer.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/html_tokenizer.c -o html_tokenizer.o
-
-html_parser.o: baremetal_browser/html_parser.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/html_parser.c -o html_parser.o
-
-bb_html.o: baremetal_browser/bb_html.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/bb_html.c -o bb_html.o
-
-css_tokenizer.o: baremetal_browser/css_tokenizer.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/css_tokenizer.c -o css_tokenizer.o
-
-css_selectors.o: baremetal_browser/css_selectors.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/css_selectors.c -o css_selectors.o
-
-css_parser.o: baremetal_browser/css_parser.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/css_parser.c -o css_parser.o
-
-css_cascade.o: baremetal_browser/css_cascade.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/css_cascade.c -o css_cascade.o
-
-style_resolver.o: baremetal_browser/style_resolver.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/style_resolver.c -o style_resolver.o
-
-bb_css.o: baremetal_browser/bb_css.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/bb_css.c -o bb_css.o
-
-painter.o: baremetal_browser/painter.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/painter.c -o painter.o
-
-hit_test.o: baremetal_browser/hit_test.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/hit_test.c -o hit_test.o
-
-bb_layout.o: baremetal_browser/bb_layout.c
-	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -I baremetal_browser -c baremetal_browser/bb_layout.c -o bb_layout.o
 
 clock.o: clock.c clock.h io.h serial.h
 	$(CC) $(CFLAGS) -I sysroot/i686-elf/include -c clock.c -o clock.o
